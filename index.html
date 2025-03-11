@@ -1,24 +1,55 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mostrar Ligas de Fútbol</title>
+    <title>Proyecto Final API</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
     />
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    <div class="container mt-5">
-      <h1>Listado de Ligas de Fútbol</h1>
-      <button id="btn" class="btn btn-primary mb-3">Cargar Ligas</button>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><i class="bi bi-trophy-fill"></i> Ligas de Fútbol</a
+        >
+      </div>
+    </nav>
 
-      <div id="datos"></div>
-      <!-- Aquí se mostrarán los datos -->
+    <div class="container mt-4">
+      <div class="row mb-4">
+        <div class="col">
+          <div class="d-flex justify-content-between align-items-center">
+            <h1><i class="bi bi-list-ul"></i> Listado de Plantillas</h1>
+            <button id="btn" class="btn btn-primary">
+              <i class="bi bi-arrow-repeat"></i> Cargar Plantilla Real Betis
+              Balompie
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="datos" class="row g-4">
+        <!-- Aquí se mostrarán los datos -->
+      </div>
     </div>
 
+    <footer class="bg-dark text-light py-4 mt-5">
+      <div class="container text-center">
+        <p class="mb-0">
+          &copy; 2025 Ligas de Fútbol. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-    <!-- Asegúrate de incluir tu archivo JS -->
   </body>
 </html>
