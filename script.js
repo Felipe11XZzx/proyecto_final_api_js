@@ -1,16 +1,13 @@
-
-async function obtenerDatosRealBetisBalompie() {
+async function obtenerDatosRealMadrid() {
   try {
-    const response = await fetch(
-      "http://localhost:3001/api/team/real-betis-balompie"
-    );
+    const response = await fetch("http://localhost:3001/api/team/real-madrid");
 
     if (!response.ok) {
       throw new Error(`Error: ${response.status}`);
     }
 
     const data = await response.json();
-    console.log("Datos de Real Betis Balompié:", data);
+    console.log("Datos de Real Madrid:", data);
     mostrarDatos(data);
   } catch (error) {
     console.error("Hubo un problema con la solicitud:", error);
@@ -40,7 +37,7 @@ function mostrarDatos(data) {
               data.area.name
             } (${data.area.code})</p>
             <p><i class="bi bi-house-fill"></i> <strong>Estadio:</strong> ${
-              data.stadium
+              data.venue
             }</p>
           </div>
         </div>
@@ -80,5 +77,5 @@ function mostrarDatos(data) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.querySelector("#btn");
-  btn.addEventListener("click", obtenerDatosRealBetisBalompie);
+  btn.addEventListener("click", obtenerDatosRealMadrid);
 });
