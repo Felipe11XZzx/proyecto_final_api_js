@@ -4,7 +4,10 @@
   "main": "backend/server.mjs",
   "type": "module",
   "scripts": {
-    "start": "nodemon backend/server.mjs"
+    "start": "nodemon server.mjs",
+    "build": "mkdir -p build && cp index.html script.js build/ && cp -r styles/ build/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +25,9 @@
   "bugs": {
     "url": "https://github.com/Felipe11XZzx/proyecto_final_api_js/issues"
   },
-  "homepage": "https://github.com/Felipe11XZzx/proyecto_final_api_js#readme",
-  "description": ""
+  "homepage": "https://felipe11xz.github.io",
+  "description": "",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }
