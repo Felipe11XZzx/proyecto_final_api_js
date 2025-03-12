@@ -13,13 +13,11 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel='icon' href='icon_champions.png' type='image/png'>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="#"
-          ><i class="bi bi-trophy-fill"></i> Ligas de Fútbol</a
-        >
       </div>
     </nav>
 
@@ -27,11 +25,49 @@
       <div class="row mb-4">
         <div class="col">
           <div class="d-flex justify-content-between align-items-center">
-            <h1><i class="bi bi-list-ul"></i> Listado de Plantillas</h1>
+            <div class='text-center mb-4'>
+              <h2 class='display-5'><img src='icon_champions.png' alt='Ícono ligas' style='width: 60px; height: auto; margin-right: 15px;'>Estadísticas de Real Madrid CF</h2>
+            </div>
             <button id="btn" class="btn btn-primary">
-              <i class="bi bi-arrow-repeat"></i> Cargar Plantilla Real Betis
-              Balompie
+              <i class="bi bi-arrow-repeat"></i> Cargar Información
             </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fila de dropdowns para diferentes tipos de información -->
+      <div class="row mb-4">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="dropdown w-100">
+            <button class="btn btn-secondary dropdown-toggle w-100 text-center" type="button" id="dropdownPartidos" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-calendar-event"></i> Próximos Partidos
+            </button>
+            <ul class="dropdown-menu w-100 bg-primary" aria-labelledby="dropdownPartidos">
+              <li><button class="dropdown-item text-white" id="btn-proximos-partidos">Ver próximos partidos</button></li>
+              <li><button class="dropdown-item text-white" id="btn-ultimos-partidos">Ver últimos resultados</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="dropdown w-100">
+            <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownCompeticiones" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-trophy"></i> Competiciones
+            </button>
+            <ul class="dropdown-menu w-100 bg-primary" aria-labelledby="dropdownCompeticiones">
+              <li><button class="dropdown-item text-white" id="btn-liga">La Liga</button></li>
+              <li><button class="dropdown-item text-white" id="btn-champions">Champions League</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="dropdown w-100">
+            <button class="btn btn-secondary dropdown-toggle w-100 text-center" type="button" id="dropdownPlantilla" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-people"></i> Plantilla
+            </button>
+            <ul class="dropdown-menu w-100 bg-primary" aria-labelledby="dropdownPlantilla">
+              <li><button class="dropdown-item text-white" id="btn-plantilla-completa">Plantilla completa</button></li>
+              <li><button class="dropdown-item text-white" id="btn-goleadores">Goleadores de La Liga</button></li>
+            </ul>
           </div>
         </div>
       </div>

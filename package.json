@@ -1,10 +1,10 @@
 {
   "name": "proyecto_final_api",
   "version": "1.0.0",
-  "main": "server.mjs",
+  "main": "backend/server.mjs",
   "type": "module",
   "scripts": {
-    "start": "nodemon server.mjs"
+    "start": "nodemon backend/server.mjs"
   },
   "author": "",
   "license": "ISC",
