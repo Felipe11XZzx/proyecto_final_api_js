@@ -12,7 +12,6 @@ const app = express();
 const port = 3001;
 
 app.use(cors());
-app.use(express.static(path.join(__dirname, '.')));
 const API_KEY = "372a8da0c43b491eb37c1509df62e5a7";
 const BASE_URL = "https://api.football-data.org/v4";
 const TEAM_ID = 86; // Real Madrid ID
